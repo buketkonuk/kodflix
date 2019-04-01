@@ -20,6 +20,21 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <main>
+          <div>
+            <div className='container'>
+              <div className = 'item'>Black Mirror</div>
+              <div className = 'item'>Man in Black</div>
+              <div className = 'item'>Star Wars</div>
+            </div>
+            <div className='container'>
+              <div className = 'item'>Black Mirror</div>
+              <div className = 'item'>Man in Black</div>
+              <div className = 'item'>Star Wars</div>
+            </div>
+          </div>
+
+        </main>
       </div>
     );
   }
