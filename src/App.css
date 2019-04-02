@@ -13,6 +13,9 @@ img{
   flex: 1;
   padding: 10px;
 }
+.item:hover {
+  background-color: yellow;
+}
 
 @media only screen and (max-width: 600px) {
 .container{
