@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
 import './App.css';
+import annie_hall from "./img/annie_hall.jpg";
+import backtothefuture from "./img/back_to_the_future.jpg";
+import final_destination from "./img/final_destination.jpg";
+import hancock from "./img/hancock.jpg";
+import obsessed from "./img/obsessed.jpg";
+import vertigo from "./img/vertigo.jpg";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <h2>Welcome to Kodflix</h2>
         <main>
-          <div>
-            <div className='container'>
-              <div className='item'><h2>Black Mirror</h2></div>
-              <div className='item'><h2>Man in Black</h2></div>
-              <div className='item'><h2>Star Wars</h2></div>
-            </div>
-            <div className='container'>
-              <div className='item'><h2>Black Mirror</h2></div>
-              <div className='item'><h2>Man in Black</h2></div>
-              <div className='item'><h2>Star Wars</h2></div>
-            </div>
+          <div className='container'>
+            <div className='item'><img src={annie_hall} alt='annie_hall' /></div>
+            <div className='item'><img src={backtothefuture} alt='back tot he future' /></div>
+            <div className='item'><img src={final_destination} alt='final destination' /></div>
+          </div>
+          <div className='container'>
+            <div className='item'><img src={hancock} alt='annie_hall' /></div>
+            <div className='item'><img src={obsessed} alt='obsessed' /></div>
+            <div className='item'><img src={vertigo} alt='vertigo' /></div>
           </div>
         </main>
       </div>
