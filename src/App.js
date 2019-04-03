@@ -15,24 +15,36 @@ class App extends Component {
         <main>
           <div className='container'>
             <div className='item'><img src={annie_hall} alt='annie_hall' />
-              <h1>Annie Hall</h1>
+              <div className='overlay'>
+                <h2>Annie Hall</h2>
+              </div>
             </div>
             <div className='item'><img src={backtothefuture} alt='back tot he future' />
-              <h1>Back to the Future</h1>
+              <div className='overlay'>
+                <h2>Back to the Future</h2>
+              </div>
             </div>
             <div className='item'><img src={final_destination} alt='final destination' />
-              <h1>Final Destination</h1>
+              <div className='overlay'>
+                <h2>Final Destination</h2>
+              </div>
             </div>
           </div>
           <div className='container'>
             <div className='item'><img src={hancock} alt='annie_hall' />
-              <h1>Hancock</h1>
+              <div className='overlay'>
+                <h2>Hancock</h2>
+              </div>
             </div>
             <div className='item'><img src={obsessed} alt='obsessed' />
-              <h1>Obsessed</h1>
+              <div className='overlay'>
+                <h2>Obsessed</h2>
+              </div>
             </div>
             <div className='item'><img src={vertigo} alt='vertigo' />
-              <h1>Vertigo</h1>
+              <div className='overlay'>
+                <h2>Vertigo</h2>
+              </div>
             </div>
           </div>
         </main>

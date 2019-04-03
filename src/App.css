@@ -12,9 +12,22 @@ img{
 .item {
   flex: 1;
   padding: 10px;
+  position: relative; 
+  border: 1px solid green;
+  
 }
-.item:hover {
-  background-color: yellow;
+.item:hover .overlay {
+  display: block;
+ 
+}
+.overlay {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: aqua;
+  opacity: 0.6;
+  
 }
 
 @media only screen and (max-width: 600px) {
