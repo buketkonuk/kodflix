@@ -24,9 +24,10 @@ img{
   display: none;
   position: absolute;
   bottom: 0;
-  width: 100%;
   background-color: aqua;
   opacity: 0.6;
+  left: 0px;
+  right: 0px;
   
 }
 
