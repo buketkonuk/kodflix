@@ -14,16 +14,20 @@ img{
   padding: 10px;
   position: relative; 
   border: 1px solid green;
+  overflow: hidden;
   
 }
 .item:hover .overlay {
-  display: block;
+  /* display: block; */
+  bottom: 0;
+  opacity: 0.6;
  
 }
 .overlay {
-  display: none;
+  /* display: none; */
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
+  transition : bottom ease 1s;
   background-color: aqua;
   opacity: 0.6;
   left: 0px;
