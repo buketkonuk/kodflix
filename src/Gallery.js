@@ -15,8 +15,6 @@ export default function Gallery() {
                 <TvShow id='annie-hall' name="Annie Hall" image={annie_hall} />
                 <TvShow id= 'back-to-the-future' name="Back to the Future" image={backtothefuture} />
                 <TvShow id= 'final-destination' name="Final Destination" image={final_destination} />
-            </div>
-            <div className='container'>
                 <TvShow id = 'hancock' name="Hancock" image={hancock} />
                 <TvShow id= 'obsessed' name="Obsessed" image={obsessed} />
                 <TvShow id= 'vertigo' name="Vertigo" image={vertigo} />

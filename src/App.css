@@ -5,12 +5,15 @@ img{
   width: 100%;
 }
 .container {
-  display: flex;
-
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .item {
-  flex: 1;
+  /* flex: 1;
+  flex-basis: 120px; */
   padding: 10px;
   position: relative; 
   border: 1px solid green;
@@ -35,8 +38,3 @@ img{
   
 }
 
-@media only screen and (max-width: 600px) {
-.container{
-  flex-direction: column;
-}
-}
