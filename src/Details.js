@@ -1,28 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import getTvShow from './getTvShow.js';
 
 export default class Details extends React.Component {
 
   constructor() {
     super(); 
       this.state = {
-        welcomeMessage: 'Hello, Welcome to the movie details Page with state Details'
+        tvShow: {}
       };
     }
   
   componentDidMount() {
-    setTimeout(() => {
-      this.setState( {
-        welcomeMessage : "Wait for me, I'm coming"
-      });
-    }, 3000);
+    let tvShowId = this.props.match.params.tvShowId;
+    let tvShow = getTvShow().find(show => show.id === tvShowId);
+
+    this.setState( {tvShow });
+
 
   }
   render() {
     return (
       <div>
         <Link to='/'>Back to Home Page</Link>
-        <h1>{this.state.welcomeMessage}</h1>
+        <h1>{this.state.tvShow.name}</h1>
         
       </div>
     );
