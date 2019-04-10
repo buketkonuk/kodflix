@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Gallery from "./Gallery";
 import Details from "./Details";
+import NotFound from './NotFound';
 
 
 class App extends Component {
@@ -12,8 +13,11 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route exact path="/" component={Gallery} />
-          <Route exact path="/:tvShowId" component={Details} />
+          <Switch>
+            <Route exact path="/" component={Gallery} />
+            <Route exact path='/not-found' component={NotFound} />
+            <Route exact path="/:tvShowId" component={Details} />
+          </Switch>
         </div>
       </Router>
     );
