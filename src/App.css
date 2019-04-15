@@ -1,9 +1,16 @@
 .App {
   text-align: center;
 }
+body {
+  background: aliceblue;
+}
+h1 {
+  color: #00ff00;
+}
 img{
   width: 100%;
 }
+
 .container {
   /* display: flex;
   flex-wrap: wrap; */
@@ -37,4 +44,5 @@ img{
   right: 0px;
   
 }
+
 
