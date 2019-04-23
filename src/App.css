@@ -5,7 +5,7 @@ body {
   background: aliceblue;
 }
 h1 {
-  color: #00ff00;
+  color: #0a0c0a;
 }
 img{
   width: 100%;
@@ -21,9 +21,9 @@ img{
 .item {
   /* flex: 1;
   flex-basis: 120px; */
-  padding: 10px;
+  padding: 1px;
   position: relative; 
-  border: 1px solid green;
+  border: 1px solid black;
   overflow: hidden;
   
 }
@@ -38,10 +38,11 @@ img{
   position: absolute;
   bottom: -100px;
   transition : bottom ease 1s;
-  background-color: aqua;
+  background-color: rgb(8, 12, 12);
   opacity: 0.6;
   left: 0px;
   right: 0px;
+  color: white;
   
 }
 
