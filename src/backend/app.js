@@ -2,7 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3001
 const showsList = require("./showsList.js");
+const path = require('path');
 
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 app.get("/rest/shows", (req, res) => {
     res.send(showsList);
