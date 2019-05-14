@@ -15,6 +15,6 @@ app.get('*', function (req, res) {
 });
 
 app.get("/", (req, res) => {
-    res.send('Welcome to Buket Kodflix App Front Page')
+    res.send('<h1>Welcome to Buket Kodflix App Front Page</h1>')
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
