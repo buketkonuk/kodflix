@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import NotFound from './NotFound';
 import { Redirect } from 'react-router-dom';
+import Loading from "./Loading"
 
 export default class Details extends React.Component {
 // first again get empty array state
@@ -34,7 +35,7 @@ export default class Details extends React.Component {
     if (movie) {
       return movie.id ? 
       <DetailsOfTvShow TvShow={movie} /> :
-      <div></div>
+      <Loading/>
     }
     else {
       return <Redirect to='/not-found' />;
