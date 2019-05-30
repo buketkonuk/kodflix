@@ -1,20 +1,27 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3001;
-const showsList = require("./showsList");
+// const showsList = require("./showsList");
 const path = require('path');
+const db = require("./db");
 
 
-app.get("/rest/shows", (req, res) => {
-    res.send(showsList());
-})
-app.use(express.static(path.join(__dirname, './../../build')));
+db.connect().then(dbo => {
+    
+    app.get("/rest/shows", (req, res) => {
+        dbo.collection("shows").find({}).toArray((err, result) => {
+            if (err) throw err;
+            // console.log(result)
+            // console.log(err);
+            res.send(result);
+        });
+    });
 
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, "./../../build", 'index.html'));
+    app.use(express.static(path.join(__dirname, './../../build')));
+
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, "./../../build", 'index.html'));
+    });
+
+    app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 });
-
-app.get("/", (req, res) => {
-    res.send('<h1>Welcome to Buket Kodflix App Front Page</h1>')
-})
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
